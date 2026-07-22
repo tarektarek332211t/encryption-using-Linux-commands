@@ -10,10 +10,10 @@ This project demonstrates how to encrypt and decrypt files using OpenSSL command
   ```
 
   ### Explanation:
-               - `echo` prints text
-               - the message is written inside double quotes ("")
-               - `>` redirects command output to the file
-               - `encrypted.txt` is the plaintext file
+     - `echo` prints text
+     - the message is written inside double quotes ("")
+     - `>` redirects command output to the file
+     - `encrypted.txt` is the plaintext file
                
   > **Note:** This command automatically creates the `encrypted.txt` file without using `touch` command
   
