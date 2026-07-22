@@ -1,3 +1,5 @@
+# Linux File Encryption using OpenSSL
+
 This project demonstrates how to encrypt and decrypt files using OpenSSL commands in Linux.
 
 
@@ -7,10 +9,10 @@ This project demonstrates how to encrypt and decrypt files using OpenSSL command
   echo "Hello, this is an encrypted file" > encrypted.txt
   ```
 
-  EXPLANATION: -(echo) prints text
-               -the message is written inside double quotes ("")
-               -(>) redirects output to the file after it
-               -(encrypted.txt) is the plaintext file
+# EXPLANATION: - `echo` prints text
+               - the message is written inside double quotes ("")
+               - `>` redirects output to the file after it
+               - `encrypted.txt` is the plaintext file
                
   *NOTE*: using this command will automatically generate (encrypted.txt) file without using (touch) command
   
