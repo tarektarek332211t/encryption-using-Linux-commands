@@ -11,11 +11,11 @@ This project demonstrates how to encrypt and decrypt files using OpenSSL command
 
   ### Explanation
    - `echo` prints text
-   - the message is written inside double quotes (`""`)
+   - The message is written inside double quotes (`""`)
    - `>` redirects command output to the file
    - `encrypted.txt` is the plaintext file
                
-  > **Note:** This command automatically creates the `encrypted.txt` file without using `touch` command
+  > **Note:** This command automatically creates the `encrypted.txt` file without using the `touch` command
   
     
 ## Step 2: Encrypt the file
@@ -43,14 +43,14 @@ This project demonstrates how to encrypt and decrypt files using OpenSSL command
    ```
 
  ### Explanation
-  - the decryption command is similar to the encryption one, with a few differences
+  - The decryption command is similar to the encryption one, with a few differences
   - `-d` tells OpenSSL to decrypt the file
   - `-in encrypted.enc` specifies the input file which is the encrypted file
   - `-out decrypted.txt` specifies the output file after decryption
               
  > **Note:** In the decryption command, the argument after `-in ` is the .enc file and the argument after `-out ` is the .txt decrypted               file
  
- > **Note:** This command automatically creates the `decrypted.txt` file without using `touch` command
+ > **Note:** This command automatically creates the `decrypted.txt` file without using the `touch` command
  
 
 ## Step 4: Verify the encryption and decryption process
