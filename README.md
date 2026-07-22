@@ -3,28 +3,28 @@
 This project demonstrates how to encrypt and decrypt files using OpenSSL commands in Linux.
 
 
-## STEP1: Create a file:-
+## Step 1: Create a file:-
 
   ```bash
   echo "Hello, this is an encrypted file" > encrypted.txt
   ```
 
-  # EXPLANATION:
+  ### Explanation:
                - `echo` prints text
                - the message is written inside double quotes ("")
                - `>` redirects command output to the file
                - `encrypted.txt` is the plaintext file
                
-  > **NOTE:** using this command will automatically generate (encrypted.txt) file without using (touch) command
+  > **Note:** This command automatically creates the `encrypted.txt` file without using `touch` command
   
     
-## STEP2: Encrypt the file:-
+## Step 2: Encrypt the file:-
 
   ```bash
   openssl enc -aes-256-cbc -pbkdf2 -salt -in encrypted.txt -out encrypted.enc
   ```
 
-  # EXPLANATION:
+  ### Explanation:
                - `openssl` runs OpenSSL encryption tool
                - `enc` means encryption mode
                - `-aes-256-cbc` is an encryption algorithm
@@ -33,51 +33,51 @@ This project demonstrates how to encrypt and decrypt files using OpenSSL command
                - `-in encrypted.txt` specifies the input file which is the plaintext file
                - `-out encrypted.enc` specifies the output file after encryption
                
-  > **NOTE:** in the encryption command, the argument after (-in ) is the .txt file and the argument after (-out ) is the .enc file
+  > **Note:** In the encryption command, the argument after `-in ` is the .txt file and the argument after `-out ` is the .enc file
 
 
-## STEP3: Decrypt the file:-
+## Step 3: Decrypt the file:-
 
    ```bash
    openssl enc -d -aes-256-cbc -pbkdf2 -in encrypted.enc -out decrypted.txt
    ```
 
- # EXPLANATION:
+ ### Explanation:
               - the decryption command is similar to the encryption one, with a few differences
               - `-d` tells OpenSSL to decrypt the file
-              - `-in encrypted.enc specifies` the input file which is the encrypted file
-              - `-out decrypted.txt specifies` the output file after decryption
+              - `-in encrypted.enc` specifies the input file which is the encrypted file
+              - `-out decrypted.txt` specifies the output file after decryption
               
- > **NOTE:** in the decryption command, the argument after (-in ) is the .enc file and the argument after (-out ) is the .txt decrypted               file
+ > **Note:** In the decryption command, the argument after `-in ` is the .enc file and the argument after `-out ` is the .txt decrypted               file
  
- > **NOTE:** using this command will automatically generate (decrypted.txt) file without using (touch) command
+ > **Note:** This command automatically creates the `decrypted.txt` file without using `touch` command
  
 
-## STEP4: Verify the encryption and decryption process:-
+## Step 4: Verify the encryption and decryption process:-
 
   ```bash
   diff encrypted.txt decrypted.txt
   ```
 
-  # EXPLANATION:
+  ### Explanation:
                - `diff` shows the difference between two files and it requires two arguments.
   
-  > **NOTE:** if there is no difference there will be no output
+  > **Note:** If there is no difference there will be no output
 
 
 
-### COMMANDS USED:-
+## COMMANDS USED:-
 
   ```bash
   echo "text" > filename.txt
-  openssl enc -aes-256-cbc -pbkdf2 -salt -in filename.txt -out filename.enc
-  openssl enc -d -aes-256-cbc -pbkdf2 -in filename.enc -out filename.txt
+  openssl enc -aes-256-cbc -pbkdf2 -salt -in filename1.txt -out filename1.enc
+  openssl enc -d -aes-256-cbc -pbkdf2 -in filename1.enc -out filename2.txt
   diff filename1.txt filename2.txt
   ```
 
 
 
-| FILES | Describtion |
+| FILES | Description |
 |-------|-------------|
 | `encrypted.txt` | Plaintext file |
 | `encrypted.enc` | Encrypted file |
@@ -85,7 +85,7 @@ This project demonstrates how to encrypt and decrypt files using OpenSSL command
 
 
 
-### Security Concepts Learned:-
+## Security Concepts Learned:-
 
 - Symmetric Encryption
 - AES-256-CBC
@@ -97,9 +97,9 @@ This project demonstrates how to encrypt and decrypt files using OpenSSL command
 
 
 
-### What we Learned
+## What I Learned
 
-Through this project, we learned:
+Through this project, I learned:
 
 - Basic file encryption and decryption using OpenSSL.
 - How AES-256-CBC works as a symmetric encryption algorithm.
