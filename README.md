@@ -11,7 +11,7 @@ This project demonstrates how to encrypt and decrypt files using OpenSSL command
 
   ### Explanation
    - `echo` prints text
-   - the message is written inside double quotes ("")
+   - the message is written inside double quotes (`""`)
    - `>` redirects command output to the file
    - `encrypted.txt` is the plaintext file
                
@@ -28,7 +28,7 @@ This project demonstrates how to encrypt and decrypt files using OpenSSL command
    - `openssl` runs OpenSSL encryption tool
    - `enc` means encryption mode
    - `-aes-256-cbc` is an encryption algorithm
-   - `-pbkdf2` stands for Password-Based Key Derivation Function 2 (PBKDF2), used to derive a secure encryption key from the                            password
+   - `-pbkdf2` stands for Password-Based Key Derivation Function 2 (PBKDF2), used to derive a secure encryption key from the password
    - `-salt` adds a random value (salt) before key derivation to improve security and protect against rainbow table attacks
    - `-in encrypted.txt` specifies the input file which is the plaintext file
    - `-out encrypted.enc` specifies the output file after encryption
@@ -77,7 +77,7 @@ This project demonstrates how to encrypt and decrypt files using OpenSSL command
 
 
 
-| FILES | Description |
+| File | Description |
 |-------|-------------|
 | `encrypted.txt` | Plaintext file |
 | `encrypted.enc` | Encrypted file |
@@ -106,3 +106,9 @@ Through this project, I learned:
 - The purpose of PBKDF2 in deriving secure encryption keys.
 - The importance of using salt to improve password security.
 - Linux file redirection and basic terminal commands.
+
+
+
+## License
+
+This project is for educational purposes only.
