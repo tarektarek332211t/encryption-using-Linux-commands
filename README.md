@@ -27,7 +27,7 @@ This project demonstrates how to encrypt and decrypt files using OpenSSL command
   ### Explanation
    - `openssl` runs OpenSSL encryption tool
    - `enc` means encryption mode
-   - `-aes-256-cbc` is an encryption algorithm
+   - `-aes-256-cbc` is a symmetric encryption algorithm
    - `-pbkdf2` stands for Password-Based Key Derivation Function 2 (PBKDF2), used to derive a secure encryption key from the password
    - `-salt` adds a random value (salt) before key derivation to improve security and protect against rainbow table attacks
    - `-in encrypted.txt` specifies the input file which is the plaintext file
@@ -66,7 +66,7 @@ This project demonstrates how to encrypt and decrypt files using OpenSSL command
 
 
 
-## COMMANDS USED
+## Commands Used
 
   ```bash
   echo "text" > filename.txt
