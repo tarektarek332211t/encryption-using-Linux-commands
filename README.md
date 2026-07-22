@@ -1,4 +1,4 @@
-This project demonstrates how to encrypt and decrypt files using Linux commands.
+This project demonstrates how to encrypt and decrypt files using OpenSSL commands in Linux.
 STEP1: Create a file:-
   echo "Hello, this is an encrypted file" > encrypted.txt
     EXPLANATION: (echo) prints text
@@ -12,8 +12,8 @@ STEP2: Encrypt the file:-
     EXPLANATION: (openssl) runs OpenSSL encryption tool
                  (enc) means encryption mode
                  (-aes-256-cbc) is an encryption algorithm
-                 (-pbkdf2) is a cryptography algorithm
-                 (-salt) adds a random SALT -which is a random group of elements- to improve secutity
+                 (-pbkdf2) stands for Password-Based Key Derivation Function 2 (PBKDF2), used to derive a secure encryption key from the                            password
+                 (-salt) adds a random SALT which adds a random value (salt) before key derivation to improve security and protect                                against rainbow table attacks
                  (-in encrypted.txt) specifies the input file which is unencrypted
                  (-out encrypted.enc) specifies the output file after encryption
     NOTE: in the encryption command, the argument after (-in ) is the .txt file and the argument after (-out ) is the .enc file
@@ -29,7 +29,7 @@ STEP3: Decrypt the file:-
 
 STEP4: Verify the encryption and decryption process:-
   diff encrypted.txt decrypted.txt
-    EXPLANATION: (diff) shows the difference between to file and it requires two arguments.
+    EXPLANATION: (diff) shows the difference between two file and it requires two arguments.
     NOTE: if there is no difference there will be no output
 
 
